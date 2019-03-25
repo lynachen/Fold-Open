@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>Fold and Open</title>
+	<link rel="stylesheet" href="https://lynachen.github.io/plug-ins/common.css" />
+	<link rel="stylesheet" href="css/detail.css" />
+</head>
+<body>
+	<div id="app">
+	    <div class="wrapper">
+			<div class="pro-box">
+			  	<!--商品图 start-->
+			  	<div class="pro-img">
+			    	<div id="preview" class="spec-preview clearfix"> 
+			    		<div class="jqzoom">
+			    			<img jqimg="img/b1.jpg" src="img/s1.jpg" />
+			    		</div> 
+			    	</div>
+				    <!--缩图开始-->
+				    <div class="spec-scroll clearfix"> 
+				    	<a class="prev">&lt;</a> 
+				    	<a class="next">&gt;</a>
+				      	<div class="items">
+				        	<ul>
+					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b3.jpg" src="img/s3.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b3.jpg" src="img/s3.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
+				        	</ul>
+				      	</div>
+				    </div>
+				    <!--缩图结束-->
+			  	</div>
+			  	<!--商品图 end-->
+			  	<!--商品描述 start-->
+			  	<div class="pro-txt">
+			  		<div class="cell tlt">得力工具得力工具捷科（JETECH）活动扳手活络扳手活口扳子大开口活扳手长度300mm，12寸 捷科（JETECH）活动扳手 活络扳手 活口扳子 大开口 活扳手 长度300mm，12寸.</div>
+			  		<div class="cell price">
+			  			<span>价格</span>
+			  			<ul class="list-price">
+			  				<li>
+			  					<span>￥989.00</span>
+			  					<span class="origin-price">￥1668</span>
+			  				</li>
+			  				<li>
+			  					<p>9</p>
+			  					<p>交易成功</p>
+			  				</li>
+			  			</ul>
+			  		</div>
+			  		<div class="cell size">
+			  			<span>尺码</span>
+			  			<ul class="list-size">
+			  				<li class="on"><a href="javascript:;">6寸</a></li>
+			  				<li><a href="javascript:;">8寸</a></li>
+			  				<li><a href="javascript:;">10寸</a></li>
+			  				<li><a href="javascript:;">12寸</a></li>			  				
+			  			</ul>
+			  		</div>
+					<div class="cell num">
+						<span>数量</span>
+						<div class="amount-box">
+							<a href="javascript:;" class="reduce reSty" @click="reduce()">-</a>
+							<input type="text" class="amount" id="amount" v-model="counter">
+							<a href="javascript:;" class="add" @click="add()">+</a>
+						</div> <!--数量-->
+					</div>
+					<div class="cell btns">
+						<a href="javascript:;" class="btn-buy">立即购买</a>
+						<a href="javascript:;" class="btn-add">加入购物车</a>
+					</div>
+			  	</div>
+			  	<!--商品描述 end-->
+			</div>
+		</div>
+	</div>
+	<script src="https://lynachen.github.io/plug-ins/jquery-2.1.4/jquery.min.js"></script>	
+	<script src="https://lynachen.github.io/plug-ins/vue-2.6.8/vue.js"></script>
+	<script src="https://lynachen.github.io/plug-ins/jquery.jqzoom/jquery.jqzoom.js"></script>
+	<script src="jquery.jqzoom.js"></script>
+	<script src="details.js"></script>
+</body>
+</html>
