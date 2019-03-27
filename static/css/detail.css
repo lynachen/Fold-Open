@@ -89,7 +89,7 @@
 .spec-scroll .items{
     float: left;
     position: relative;
-    width: 435px;
+    width: 442px;
     height: 56px;
     overflow: hidden;
 }
@@ -196,15 +196,13 @@
 	margin-right: 14px;
 	font-size: 12px;
 	color: #666;
+	cursor: pointer;
 }
 .pro-txt .list-size li:hover,
 .pro-txt .list-size li.on {
 	background-color: #cf0723;
-	border: 1px solid transparent;
-}
-.pro-txt .list-size li:hover a,
-.pro-txt .list-size li.on a {
 	color: #fff;
+	border: 1px solid transparent;
 }
 .pro-txt .num .amount-box {
 	width: 100px;

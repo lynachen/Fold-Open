@@ -6,9 +6,9 @@
     <meta name="renderer" content="webkit|ie-comp|ie-stand" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<title>Fold and Open</title>
+	<title>product details</title>
 	<link rel="stylesheet" href="https://lynachen.github.io/plug-ins/common.css" />
-	<link rel="stylesheet" href="css/detail.css" />
+	<link rel="stylesheet" href="../static/css/detail.css" />
 </head>
 <body>
 	<div id="app">
@@ -18,7 +18,7 @@
 			  	<div class="pro-img">
 			    	<div id="preview" class="spec-preview clearfix"> 
 			    		<div class="jqzoom">
-			    			<img jqimg="img/b1.jpg" src="img/s1.jpg" />
+			    			<img jqimg="../static/images/b1.jpg" src="../static/images/s1.jpg" />
 			    		</div> 
 			    	</div>
 				    <!--缩图开始-->
@@ -27,18 +27,18 @@
 				    	<a class="next">&gt;</a>
 				      	<div class="items">
 				        	<ul>
-					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b3.jpg" src="img/s3.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b3.jpg" src="img/s3.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b1.jpg" src="img/s1.jpg" onmousemove="preview(this);"></li>
-					          	<li><img alt="佳能" bimg="img/b2.jpg" src="img/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b1.jpg" src="../static/images/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b2.jpg" src="../static/images/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b3.jpg" src="../static/images/s3.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b1.jpg" src="../static/images/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b3.jpg" src="../static/images/s3.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b1.jpg" src="../static/images/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b2.jpg" src="../static/images/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b1.jpg" src="../static/images/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b2.jpg" src="../static/images/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b2.jpg" src="../static/images/s2.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b1.jpg" src="../static/images/s1.jpg" onmousemove="preview(this);"></li>
+					          	<li><img alt="佳能" bimg="../static/images/b2.jpg" src="../static/images/s2.jpg" onmousemove="preview(this);"></li>
 				        	</ul>
 				      	</div>
 				    </div>
@@ -64,10 +64,7 @@
 			  		<div class="cell size">
 			  			<span>尺码</span>
 			  			<ul class="list-size">
-			  				<li class="on"><a href="javascript:;">6寸</a></li>
-			  				<li><a href="javascript:;">8寸</a></li>
-			  				<li><a href="javascript:;">10寸</a></li>
-			  				<li><a href="javascript:;">12寸</a></li>			  				
+			  				<li v-for="(item,index) in allSize" v-text="item.text" @click="choiceSize(index)" :class="{'on':index==current}">6寸</li>			  				
 			  			</ul>
 			  		</div>
 					<div class="cell num">
@@ -89,8 +86,8 @@
 	</div>
 	<script src="https://lynachen.github.io/plug-ins/jquery-2.1.4/jquery.min.js"></script>	
 	<script src="https://lynachen.github.io/plug-ins/vue-2.6.8/vue.js"></script>
+	<!--放大镜插件-->
 	<script src="https://lynachen.github.io/plug-ins/jquery.jqzoom/jquery.jqzoom.js"></script>
-	<script src="jquery.jqzoom.js"></script>
-	<script src="details.js"></script>
+	<script src="../static/js/details.js"></script>
 </body>
 </html>

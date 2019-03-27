@@ -54,7 +54,14 @@ $(function(){
 var  vue = new Vue({
     el:'#app',
     data:{
+    	current:0,
 		counter:1,
+		allSize:[
+			{text:'6寸'},
+			{text:'8寸'},
+			{text:'10寸'},
+			{text:'12寸'},
+		],
     },
     created: function () {
     	
@@ -63,10 +70,16 @@ var  vue = new Vue({
 
     },
     methods:{
+    	//选中焦点
+    	choiceSize(index){
+    		this.current=index
+    	},
+    	//加
     	add:function(){
     		this.counter = parseInt(this.counter) + 1;
     		$('.reduce').removeClass('reSty');
     	},
+    	//减
     	reduce:function(){
     		if(this.counter > 1){
     			this.counter = parseInt(this.counter) - 1;
